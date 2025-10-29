@@ -12,7 +12,7 @@ Entrada: Las coordenadas (x, y) de la mano en el espacio de la cámara
 
 Salida: Una de las 4 direcciones posibles para mover la serpiente
 
-Reto: Convertir posiciones espaciales continuas en categorías discretas de movimiento de manera precisa y con baja latencia
+Reto: Convertir posiciones espaciales continuas en categorías discretas de movimiento de manera precisa
 
 La solución implementada divide el área de la cámara en zonas y clasifica según en qué zona se encuentra la mano del usuario.
 
