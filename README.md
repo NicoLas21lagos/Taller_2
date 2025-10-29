@@ -1,0 +1,15 @@
+\*\*\* Descripción del Proyecto
+
+\*\* Este proyecto implementa el clásico juego Snake con un sistema de control innovador que utiliza gestos de manos en lugar de teclado. La aplicación detecta movimientos de la mano a través de la cámara web y los traduce en comandos de dirección para controlar la serpiente.
+
+\*\* Poblema de clasificacion:
+
+El problema de clasificación asociado es identificar la dirección del movimiento (arriba, abajo, izquierda, derecha) basándose en la posición de la mano detectada por la cámara.
+
+Se trata de un problema de clasificación multiclase en tiempo real donde:
+
+Entrada: Las coordenadas (x, y) de la mano en el espacio de la cámara
+
+Salida: Una de las 4 direcciones posibles para mover la serpiente
+
+Reto: Convertir posiciones espaciales continuas en categorías discretas de movimiento de manera precisa y con baja latencia
