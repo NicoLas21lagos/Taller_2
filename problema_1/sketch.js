@@ -6,7 +6,7 @@ let h;
 let gameStarted = false;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   w = floor(width / rez);
   h = floor(height / rez);
   frameRate(3);
@@ -97,9 +97,9 @@ function gameOver() {
   background(255, 0, 0, 100);
   fill(255);
   textAlign(CENTER, CENTER);
-  textSize(20);
+  textSize(14);
   text('¡GAME OVER!', w/2, h/2 - 20);
-  textSize(12);
+  textSize(3);
   text('Puntuación: ' + snake.len, w/2, h/2);
   text('Presiona R para reiniciar', w/2, h/2 + 20);
   noLoop();

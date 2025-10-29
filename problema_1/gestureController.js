@@ -61,30 +61,30 @@ class GestureController {
     this.updateStatusDisplay(landmarks);
   }
 
-  updateDirection(landmarks) {
-    const wrist = landmarks[0];
-    
-    const zoneWidth = 0.3;
-    
-    if (wrist.x > 0.7) {
-      this.currentDirection = { x: 1, y: 0 };
-    }
-    else if (wrist.x < 0.3) {
-      this.currentDirection = { x: -1, y: 0 };
-    }
-    else if (wrist.y < 0.3) {
-      this.currentDirection = { x: 0, y: -1 };
-    }
-    else if (wrist.y > 0.7) {
-      this.currentDirection = { x: 0, y: 1 };
-    }
-    
-    if (this.currentDirection.x !== this.lastDirection.x || 
-        this.currentDirection.y !== this.lastDirection.y) {
-      this.lastDirection = { ...this.currentDirection };
-      this.applyDirectionToSnake();
-    }
+ updateDirection(landmarks) {
+  const wrist = landmarks[0];
+  
+  const zoneWidth = 0.3;
+  
+  if (wrist.x > 0.7) {
+    this.currentDirection = { x: -1, y: 0 };
   }
+  else if (wrist.x < 0.3) {
+    this.currentDirection = { x: 1, y: 0 };
+  }
+  else if (wrist.y < 0.3) {
+    this.currentDirection = { x: 0, y: -1 };
+  }
+  else if (wrist.y > 0.7) {
+    this.currentDirection = { x: 0, y: 1 };
+  }
+  
+  if (this.currentDirection.x !== this.lastDirection.x || 
+      this.currentDirection.y !== this.lastDirection.y) {
+    this.lastDirection = { ...this.currentDirection };
+    this.applyDirectionToSnake();
+  }
+}
 
   updateStatusDisplay(landmarks) {
     const wrist = landmarks[0];
@@ -94,7 +94,7 @@ class GestureController {
     else if (this.currentDirection.x === -1) directionText = '⬅️ IZQUIERDA';
     else if (this.currentDirection.y === -1) directionText = '⬆️ ARRIBA';
     else if (this.currentDirection.y === 1) directionText = '⬇️ ABAJO';
-    else directionText = '📍 CENTRO';
+    else directionText = 'CENTRO';
 
     document.getElementById('status').textContent = 
       `Mano detectada - Dirección: ${directionText}`;
