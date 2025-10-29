@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="instructions">
+        <h3>Controles por Gestos:</h3>
+        <p>- Mueve la mano IZQUIERDA para cambiar dirección</p>
+        <p>- Mantén la mano en los bordes de la cámara para mover la serpiente</p>
+        <p id="status">Inicializando cámara...</p>
+      </div>
+    </div>
+    <script src="snake.js"></script>
+    <script src="gestureController.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
